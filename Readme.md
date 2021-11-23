@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Маргарита Ялюшева](https://up.htmlacademy.ru/adaptive/24/user/1459161).
-* Наставник: `Неизвестно`.
+* Наставник: [Артем Таланов](https://htmlacademy.ru/profile/talanovartem).
 
 ---
 
