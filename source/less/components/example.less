@@ -1,5 +1,12 @@
 .example {
   background-color: @special_grey-5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.example__wrapper {
+  padding: 0 20px;
 }
 
 .example__text {
@@ -21,4 +28,21 @@
 .example__cost {
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .example__wrapper {
+    padding: 0 30px;
+  }
+
+  .example__text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    padding: 0 110px;
+  }
 }

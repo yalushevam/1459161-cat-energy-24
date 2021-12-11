@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -45,7 +46,7 @@
 
     <section class="promo">
 
-      <div class="promo__wrapper">
+      <div class="promo__wrapper"> <!--вначале думала, что обертка нужна для фона, носейчас не очень уверена как его делать -->
         <h1 class="promo__title">Функциональное питание для котов</h1>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
         <img class="promo__image" src="img/main-page__good-image.png" width="280" height="270" alt="Фото товара">
@@ -127,10 +128,10 @@
       </div>
 
       <div class="example__switch">
-        <button type="button" class="example__switch-text example__switch-text--before">Было</button>
-        <div class="example__switch-handle"></div>
-        <!--не забыть поправить, можно чекбоксом-->
-        <button type="button" class="example__switch-text example__switch-text--after">Стало</button>
+          <!--фото кота-->
+            <label class="example__switch-text" for="slider__switch">Было</label>
+            <input class="slider__switch" type="checkbox" name="slider__switch" id="slider__switch" role="switch">
+            <label class="example__switch-text" for="slider__switch">Стало</label>
       </div>
 
     </section>
@@ -144,8 +145,7 @@
       </div>
 
       <iframe class="cooperation__map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787258684!2d30.320853351422233!3d59.93871648178727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638092780524!5m2!1sru!2sru"
-        width="320" height="360" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787258684!2d30.320853351422233!3d59.93871648178727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638092780524!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
   </main>
 

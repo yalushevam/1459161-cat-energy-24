@@ -1,0 +1,28 @@
+.page-header {
+  padding: 10px 20px 15px;
+  min-height: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    padding: 25px 30px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    padding: 50px 110px;
+  }
+}
