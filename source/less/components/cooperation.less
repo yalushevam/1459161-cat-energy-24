@@ -2,19 +2,60 @@
   background-color: @basic_white;
 }
 
+.cooperation__wrapper {
+  padding: 40px 20px;
+  display: flex;
+}
+
 .cooperation__text {
-  font-family: @font-family;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  color: @black;
+  text-align: center;
+  margin: 0;
 }
 
 .cooperation__address {
-  font-family: "Arial", "Oswald", sans-serif;
+  font-family: @font-Arial;
   font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
   line-height: 20px;
+  margin-left: 10px;
+}
+
+.cooperation__map {
+  width: 100vw; //тут не знаю можно vh использовать при хейте
+  height: 362px;
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__wrapper {
+    padding: 56px 70px;
+  }
+
+  .cooperation__text {
+    font-size: 20px;
+    line-height: 26px;
+    text-align: left;
+    width: 170px;
+  }
+
+  .cooperation__map {
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cooperation {
+    position: relative;
+  }
+
+  .cooperation__wrapper {
+    background-color: @basic_white;
+    position: absolute;
+    padding: 56px 80px;
+    width: 565px;
+    top: 95px;
+    left: 110px;
+  }
 }
