@@ -1,0 +1,36 @@
+.catalog-card__title {
+  font-family: @font-Oswald;
+  font-weight: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: @special_dark-grey-2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 21px; //тут значение среди всех выделяется, поэтому в px
+  }
+
+  &--more {
+    color: @black;
+
+    @media (min-width: @tablet-width) {
+      line-height: 1.1;
+    }
+  }
+}
+
+.catalog-card__button {
+  font-family: @font-Oswald;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.catalog-card__text {
+  @media (min-width: @tablet-width) {
+    line-height: 1.1;
+  }
+}

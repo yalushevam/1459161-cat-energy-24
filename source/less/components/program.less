@@ -1,9 +1,39 @@
+.program {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+@media (min-width: @tablet-width) {
+  .program {
+    padding: 0 30px;
+  }
+
+  .program__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .form__text {
+    font-size: 20px;
+    line-height: 30px;
+    width: 323px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program {
+    padding: 0 110px;
+  }
+}
+
+.program__title {
+  line-height: 36px;
+}
+
 .program__text {
-  font-family: @font-Oswald;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
   text-transform: uppercase;
   color: @basic_black;
 }
