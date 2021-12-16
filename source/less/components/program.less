@@ -2,8 +2,15 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-content: flex-start;
+}
+
+.program__title {
+  line-height: 1;
+}
+
+.program__text {
+  text-transform: uppercase;
+  color: @basic_black;
 }
 
 @media (min-width: @tablet-width) {
@@ -16,7 +23,7 @@
     line-height: 1;
   }
 
-  .form__text {
+  .program__text {
     font-size: 20px;
     line-height: 1.5;
     width: 323px;
@@ -29,11 +36,3 @@
   }
 }
 
-.program__title {
-  line-height: 1;
-}
-
-.program__text {
-  text-transform: uppercase;
-  color: @basic_black;
-}

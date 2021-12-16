@@ -22,7 +22,7 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
-      <div class="main-nav__wrapper">
+      <div class="main-nav__box">
 
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -55,6 +55,7 @@
 
         <div class="form__wrapper">
 
+        <div class="form__box form__box--cat">
           <label class="form__label">
             <span class="form__name">Имя:*</span>
             <input class="form__field" type="text" placeholder="БАРСИК" name="name" required>
@@ -67,7 +68,9 @@
             <span class="form__name">Возраст (лет):</span>
             <input class="form__field" type="number" placeholder="7" name="age">
           </label>
+        </div>
 
+        <div class="form__box form__box--type">
           <label class="form__label">
             <input class="form__radio" type="radio" checked name="program" value="loss">
             <span class="form__name">Похудение</span>
@@ -80,7 +83,10 @@
             <input class="form__radio" type="radio" name="program" value="unidentified">
             <span class="form__name">Не знаю (Нужен ваш совет)</span>
           </label>
+          </div>
+        </div>
 
+          <div class="form__box form__box--contacts">
           <h2 class="subtitle form__subtitle">Контактные данные (владельца кота)</h2>
 
           <label class="form__label">
@@ -91,11 +97,15 @@
             <span class="form__name">Телефон:*</span>
             <input class="form__field form__field--tel" type="tel" placeholder="8 (960) 900-60-90" required>
           </label>
+        </div>
 
+        <div class="form__box form__box--comment">
           <h2 class="subtitle form__subtitle">Комментарий</h2>
           <textarea class="form__field" name="comment" cols="20" rows="20"
             placeholder="Расскажите обо всех повадках кота"></textarea>
+        </div>
 
+        <div class="form__box form__box--add">
           <h2 class="subtitle form__subtitle">Дополнительно</h2>
 
           <label class="form__label">
@@ -136,7 +146,7 @@
 
   <footer class="page-footer">
 
-    <div class="page-footer__wrapper">
+    <div class="page-footer__box">
 
       <a class="logo page-footer__logo">
         <img class="logo__text" src="img/logo-text.svg" width="128" height="24" alt="Логотип">
