@@ -16,8 +16,9 @@
 .offer-list__title {
   font-weight: normal;
   font-size: 24px;
-  line-height: 37px;
+  line-height: 1.5;
   text-transform: uppercase;
+  color: @basic_black;
 }
 
 .offer-list__text {
@@ -26,42 +27,36 @@
 
 .offer-list__link {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   text-transform: uppercase;
   color: @basic_black;
 }
 
 
 @media (min-width: @tablet-width) {
-  .offer-list {
-    padding: 50px;
-  }
-
   .offer-list__loss {
     margin-bottom: 30px;
   }
 
   .offer-list__title {
     font-size: 36px;
-    line-height: 36px;
+    line-height: 1;
   }
 
   .offer-list__text {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
   }
 
   .offer-list__link {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 1.5;
   }
 }
 
 @media (min-width: @desktop-width) {
   .offer-list {
     display: flex;
-    margin: 0;
-    flex-direction: row;
     justify-content: space-between;
   }
 
