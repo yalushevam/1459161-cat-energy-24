@@ -6,7 +6,7 @@
   }
 }
 
-.form__box--cat {
+.form__box--cat { //я в самом form__box пока ничего не установила, поэтому модификаторы сейчас отдельно
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 10px;
@@ -40,7 +40,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    //загнать в ряд
+    //загнать в ряд, тупичок
   }
 }
 
@@ -74,6 +74,10 @@
   line-height: 1.1;
   text-transform: uppercase;
 
+  &-form__name--dark {
+    color: @basic_black;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1.5;
@@ -85,10 +89,6 @@
   font-size: 16px;
   line-height: 1.1;
   text-transform: uppercase;
-}
-
-.form__name--dark {
-  color: @basic_black;
 }
 
 .form__required {
