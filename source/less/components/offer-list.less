@@ -2,10 +2,25 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    column-gap: 80px;
+  }
+}
+
+.offer-list__type {
+  @media (min-width: @desktop-width) {
+    width: 50%; //тут немного не поняла, должно быть 50% или 100%, но сейчас одинаковые по ширине блоки
+  }
 }
 
 .offer-list__loss {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .offer-list__wrapper {
@@ -16,57 +31,33 @@
 .offer-list__title {
   font-weight: normal;
   font-size: 24px;
-  line-height: 37px;
+  line-height: 1.5;
   text-transform: uppercase;
+  color: @basic_black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 1;
+  }
 }
 
 .offer-list__text {
   font-family: @font-Arial;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 .offer-list__link {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   text-transform: uppercase;
   color: @basic_black;
-}
 
-
-@media (min-width: @tablet-width) {
-  .offer-list {
-    padding: 50px;
-  }
-
-  .offer-list__loss {
-    margin-bottom: 30px;
-  }
-
-  .offer-list__title {
-    font-size: 36px;
-    line-height: 36px;
-  }
-
-  .offer-list__text {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .offer-list__link {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 1.5;
   }
 }
-
-@media (min-width: @desktop-width) {
-  .offer-list {
-    display: flex;
-    margin: 0;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .offer-list__loss {
-    margin-right: 80px;
-  }
-}
-

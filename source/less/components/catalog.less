@@ -1,8 +1,8 @@
-.how-it-works__wrapper {
+.catalog__wrapper {
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 30px 50px;
+    padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -10,31 +10,23 @@
   }
 }
 
-.how-it-works__list {
-  padding: 0;
+.catalog__title {
+  line-height: 1;
+}
+
+.catalog__list {
   margin: 0;
+  padding: 0;
   list-style: none;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    column-gap: 60px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.how-it-works__text {
-  font-family: @font-Arial;
-  color: @special_dark-grey;
-
-  @media (min-width: @tablet-width) {
-    font-size: 16px;
-  }
-
-  @media (min-width: @tablet-width) {
-    font-size: 16px;
+    row-gap: 60px;
   }
 }

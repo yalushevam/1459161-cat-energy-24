@@ -5,10 +5,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
 
-@media (min-width: @tablet-width) {
-  .page-header {
+  @media (min-width: @tablet-width) {
     padding: 25px 30px 50px;
     display: flex;
     flex-direction: row;
@@ -16,13 +14,13 @@
     align-items: center;
   }
 
-  .main-nav__toggle {
-    display: none;
+  @media (min-width: @desktop-width) {
+    padding: 50px 110px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .page-header {
-    padding: 50px 110px;
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }

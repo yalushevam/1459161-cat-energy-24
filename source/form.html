@@ -22,7 +22,7 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
-      <div class="main-nav__wrapper">
+      <div class="main-nav__box">
 
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -44,17 +44,18 @@
 
   </header>
 
-  <main class="page-body">
+  <main class="main-page">
 
     <section class="program">
 
       <h1 class="title program__title">Подбор программы</h1>
-      <p class="program__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <p class="program__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
         <div class="form__wrapper">
 
+        <div class="form__box form__box--cat">
           <label class="form__label">
             <span class="form__name">Имя:*</span>
             <input class="form__field" type="text" placeholder="БАРСИК" name="name" required>
@@ -67,7 +68,9 @@
             <span class="form__name">Возраст (лет):</span>
             <input class="form__field" type="number" placeholder="7" name="age">
           </label>
+        </div>
 
+        <div class="form__box form__box--type">
           <label class="form__label">
             <input class="form__radio" type="radio" checked name="program" value="loss">
             <span class="form__name">Похудение</span>
@@ -80,7 +83,10 @@
             <input class="form__radio" type="radio" name="program" value="unidentified">
             <span class="form__name">Не знаю (Нужен ваш совет)</span>
           </label>
+          </div>
+        </div>
 
+          <div class="form__box form__box--contacts">
           <h2 class="subtitle form__subtitle">Контактные данные (владельца кота)</h2>
 
           <label class="form__label">
@@ -91,28 +97,32 @@
             <span class="form__name">Телефон:*</span>
             <input class="form__field form__field--tel" type="tel" placeholder="8 (960) 900-60-90" required>
           </label>
+        </div>
 
+        <div class="form__box form__box--comment">
           <h2 class="subtitle form__subtitle">Комментарий</h2>
           <textarea class="form__field" name="comment" cols="20" rows="20"
             placeholder="Расскажите обо всех повадках кота"></textarea>
+        </div>
 
+        <div class="form__box form__box--add">
           <h2 class="subtitle form__subtitle">Дополнительно</h2>
 
           <label class="form__label">
             <input class="form__checkbox" type="checkbox" name="extra" value="sweetener" checked>
-            <span class="form__name">Сахарозаменитель</span>
+            <span class="form__name form__name--dark">Сахарозаменитель</span>
           </label>
           <label class="form__label">
             <input class="form__checkbox" type="checkbox" name="extra" value="water">
-            <span class="form__name">Питьевая вода</span>
+            <span class="form__name form__name--dark">Питьевая вода</span>
           </label>
           <label class="form__label">
             <input class="form__checkbox" type="checkbox" name="extra" value="milk">
-            <span class="form__name">Молоко</span>
+            <span class="form__name form__name--dark">Молоко</span>
           </label>
           <label class="form__label">
             <input class="form__checkbox" type="checkbox" name="extra" value="vitamin">
-            <span class="form__name">Витамины</span>
+            <span class="form__name form__name--dark">Витамины</span>
           </label>
           <button class="form__button button" type="submit">Отправить заявку</button>
           <p class="form__required">* — Обязательные поля</p>
@@ -136,7 +146,7 @@
 
   <footer class="page-footer">
 
-    <div class="page-footer__wrapper">
+    <div class="page-footer__box">
 
       <a class="logo page-footer__logo">
         <img class="logo__text" src="img/logo-text.svg" width="128" height="24" alt="Логотип">
