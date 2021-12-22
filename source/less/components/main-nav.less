@@ -1,3 +1,72 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  z-index: 2;
+  width: 70px; //уточнить размеры
+  height: 50px;
+  background-color: @basic_white;
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 17px;
+  width: 36px;
+  height: 1.5px;
+  background-color: @basic_black;
+  box-shadow: 0 8px 0 0 @basic_black, 0 16px 0 0 @basic_black;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+
+  &:active {
+    display: block;
+  }
+}
+
+.main-nav--closed .main-nav__item--current {
+  padding-right: 70px;
+  padding-left: 70px;
+  text-align: center;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 25%;
+  left: auto;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 18px;
+    width: 30px;
+    height: 2px;
+    background-color: @basic_black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
 .main-nav__wrapper {
   display: flex;
   flex-direction: column;
@@ -35,4 +104,9 @@
   line-height: 1;
   text-transform: uppercase;
   color: @basic_black;
+  position: relative;
+  display: block;
+  padding: 22px;
+  padding-bottom: 13px;
+  text-decoration: none;
 }

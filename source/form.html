@@ -49,7 +49,7 @@
     <section class="program">
 
       <h1 class="title program__title">Подбор программы</h1>
-      <p class="program__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="program__text">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота</p>
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
@@ -86,9 +86,9 @@
           </div>
         </div>
 
-          <div class="form__box form__box--contacts">
+          <div class="form__box">
           <h2 class="subtitle form__subtitle">Контактные данные (владельца кота)</h2>
-
+          <div class="form__box--contacts">
           <label class="form__label">
             <span class="form__name">E-mail:*</span>
             <input class="form__field form__field--mail" type="email" placeholder="kuklachev@gmail.com" required>
@@ -97,6 +97,7 @@
             <span class="form__name">Телефон:*</span>
             <input class="form__field form__field--tel" type="tel" placeholder="8 (960) 900-60-90" required>
           </label>
+          </div>
         </div>
 
         <div class="form__box form__box--comment">
@@ -105,27 +106,28 @@
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
 
-        <div class="form__box form__box--add">
+        <div class="form__box">
           <h2 class="subtitle form__subtitle">Дополнительно</h2>
-
-          <label class="form__label">
-            <input class="form__checkbox" type="checkbox" name="extra" value="sweetener" checked>
-            <span class="form__name form__name--dark">Сахарозаменитель</span>
-          </label>
-          <label class="form__label">
-            <input class="form__checkbox" type="checkbox" name="extra" value="water">
-            <span class="form__name form__name--dark">Питьевая вода</span>
-          </label>
-          <label class="form__label">
-            <input class="form__checkbox" type="checkbox" name="extra" value="milk">
-            <span class="form__name form__name--dark">Молоко</span>
-          </label>
-          <label class="form__label">
-            <input class="form__checkbox" type="checkbox" name="extra" value="vitamin">
-            <span class="form__name form__name--dark">Витамины</span>
-          </label>
-          <button class="form__button button" type="submit">Отправить заявку</button>
-          <p class="form__required">* — Обязательные поля</p>
+          <div class="form__box--add">
+            <label class="form__label">
+              <input class="form__checkbox" type="checkbox" name="extra" value="sweetener" checked>
+              <span class="form__name form__name--dark">Сахарозаменитель</span>
+            </label>
+            <label class="form__label">
+              <input class="form__checkbox" type="checkbox" name="extra" value="water">
+              <span class="form__name form__name--dark">Питьевая вода</span>
+            </label>
+            <label class="form__label">
+              <input class="form__checkbox" type="checkbox" name="extra" value="milk">
+              <span class="form__name form__name--dark">Молоко</span>
+            </label>
+            <label class="form__label">
+              <input class="form__checkbox" type="checkbox" name="extra" value="vitamin">
+              <span class="form__name form__name--dark">Витамины</span>
+            </label>
+          </div>
+            <button class="form__button button" type="submit">Отправить заявку</button>
+            <p class="form__required">* — Обязательные поля</p>
         </div>
 
       </form>
