@@ -17,7 +17,7 @@
       <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
     </a>
 
-    <nav class="main-nav main-nav--opened">
+    <nav class="main-nav main-nav--opened main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -47,7 +47,7 @@
     <section class="promo">
 
       <div class="promo__wrapper">
-        <h1 class="promo__title">Функциональное питание для котов</h1>
+        <h1 class="promo__title">Функциональное питание&nbspдля котов</h1>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
         <img class="promo__image" src="img/main-page__good-image.png" width="280" height="270" alt="Фото товара">
       </div>
@@ -118,12 +118,17 @@
           по-прежнему спит по 16 часов в день.</p>
 
       <div class="example__box">
-        <dl class="example__list">
-          <dt class="example__name example__name--loss">снижение веса</dt>
-          <dd class="example__result example__result--loss">5 кг</dd>
-          <dt class="example__name example__name--time">затрачено времени</dt>
-          <dd class="example__result example__result--time">60 дней</dd>
-        </dl>
+        <ul class="example__list">
+          <li class="example__item">
+          <p class="example__result">5 кг</p>
+          <p class="example__name">снижение веса</p>
+          </li>
+
+          <li class="example__item">
+          <p class="example__result">60 дней</p>
+          <p class="example__name">затрачено времени</p>
+          </li>
+        </ul>
 
         <p class="example__cost">Затраты на питание: <span class="example__price">15 000 руб.</span></p>
       </div>
@@ -138,7 +143,7 @@
 
     </section>
 
-    <section class="cooperation">
+    <section class="cooperation cooperation--index">
       <h2 class="visually-hidden">Контакты</h2>
 
       <div class="cooperation__wrapper">
@@ -204,7 +209,7 @@
     </div>
   </footer>
 
-
+<script src="./js/script.js"></script>
 </body>
 
 </html>
