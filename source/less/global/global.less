@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: @font-Oswald;
   font-style: normal;
@@ -18,3 +28,12 @@ a {
   text-decoration: none;
 }
 
+.container {
+  width: 100%;
+  padding: 0 15px; //поч не 20?
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 738px; // +60?
+  }
+}
