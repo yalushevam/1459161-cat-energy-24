@@ -127,14 +127,19 @@
   color: @basic_black;
   position: relative;
   display: block;
+  white-space: nowrap;
   text-decoration: none;
   // padding: 22px 20px;
   // padding-bottom: 13px;
   padding: 22px 0 24px;
-  border-top: 1px solid @special_grey-8;
+  border-bottom: 1px solid @special_grey-8;
 
   @media (min-width: @tablet-width) {
     border: none;
     padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @basic_white;
   }
 }
