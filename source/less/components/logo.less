@@ -1,9 +1,6 @@
 .logo {
   text-decoration: none;
   display: flex;
-  flex-direction: row;
-  min-width: 190px;
-  justify-content: space-between;
 
   &:hover {
     opacity: 0.8;
@@ -11,5 +8,18 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    gap: 10px;
+  }
+}
+
+.logo__text {
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
   }
 }

@@ -2,37 +2,37 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .program__title {
   line-height: 1;
+  margin-top: 0;
+  margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    margin-bottom: 54px;
+  }
 }
 
 .program__text {
   text-transform: uppercase;
   color: @basic_black;
-}
+  margin-top: 0;
+  margin-bottom: 39px;
 
-@media (min-width: @tablet-width) {
-  .program {
-    padding: 0 30px;
-  }
-
-  .program__title {
-    font-size: 60px;
-    line-height: 1;
-  }
-
-  .program__text {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1.5;
     width: 323px;
+    margin-bottom: 66px;
   }
 }
-
-@media (min-width: @desktop-width) {
-  .program {
-    padding: 0 110px;
-  }
-}
-

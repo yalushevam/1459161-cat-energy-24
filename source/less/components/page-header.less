@@ -1,26 +1,22 @@
 .page-header {
-  padding: 10px 20px 15px;
-  min-height: 38px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  padding: 10px 0 17px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 25px 30px 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    padding: 25px 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 50px 110px;
+    padding: 50px 0 50px;
   }
 }
 
-.main-nav__toggle {
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
+.page-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__logo {
+  flex-grow: 1;
 }
