@@ -1,9 +1,54 @@
+.catalog-card {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 19px;
+  padding-bottom: 25px;
+  border-top: 1px solid @special_grey-2;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    flex-direction: column;
+    background-color: @basic_grey;
+    align-items: center;
+    padding-left: 37px;
+    padding-right: 39px;
+    margin-bottom: 20px;//не точное
+  }
+
+  &--add { //хотела сделать бордер псевдоклассом, куда здесь добавить к модификатору можно? самый нижний бордер для "Дополнительно"
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: @basic_white;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &--more {
+    justify-content: center;
+    border-bottom: 1px solid @special_grey-2;
+
+    @media (min-width: @tablet-width) {
+      background-color: @basic_white;
+      border: 1px solid @basic_grey;
+    }
+  }
+}
+
 .catalog-card__title {
   font-family: @font-Oswald;
   font-weight: normal;
   font-size: 16px;
   text-transform: uppercase;
   color: @special_dark-grey-2;
+  margin-top: 0;
+  margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -16,6 +61,7 @@
 
   &--more {
     color: @black;
+    justify-content: center;
 
     @media (min-width: @tablet-width) {
       line-height: 1.1;
@@ -23,27 +69,36 @@
   }
 }
 
-.catalog-card__button {
-  font-family: @font-Oswald;
-  font-size: 16px;
-  line-height: 1.25;
+.catalog-card__table {
+  width: 100%;
+  font-family: @font-Arial;
 }
 
 .catalog-card__text {
   font-family: @font-Arial;
+  margin-top: 0;
 
   @media (min-width: @tablet-width) {
     line-height: 1.1;
   }
 }
 
-.catalog-card__table {
-  font-family: @font-Arial;
+.catalog-card__desc {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
-.catalog-card--add {
-  @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
+.catalog-card__parameter {
+  @media (min-width: @tablet-width) {
+    margin-right: 50px;
   }
+}
+
+.catalog-card__button {
+  font-family: @font-Oswald;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  text-align: center;
 }
