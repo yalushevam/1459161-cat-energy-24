@@ -41,6 +41,12 @@
   }
 }
 
+.catalog-card__inner {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 33px;
+  }
+}
+
 .catalog-card__title {
   font-family: @font-Oswald;
   font-weight: normal;
@@ -72,6 +78,20 @@
 .catalog-card__table {
   width: 100%;
   font-family: @font-Arial;
+  border-collapse: collapse;
+  border-spacing: 0; //кажется,что ничего не изменилось
+}
+
+.catalog-card__item {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid @special_grey;
+  }
+}
+
+.catalog-card__cell-name {
+  @media (min-width: @tablet-width) {
+    padding: 7px 0 9px;
+  }
 }
 
 .catalog-card__text {

@@ -110,7 +110,7 @@
           height: 2px;
           background-color: @basic_green;
 
-          @media (min-width: @desktop-width) {
+          @media (min-width: @desktop-width) { //ка же застилизовать псевдо на второстепенных?
             background-color: @basic_white;
           }
         }
@@ -145,6 +145,10 @@
   &--index {
     @media (min-width: @desktop-width) {
       color: @basic_white;
+
+      // &::before {
+      //   color: @basic_white;
+      // }
     }
   }
 }
