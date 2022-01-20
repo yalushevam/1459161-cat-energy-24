@@ -15,35 +15,64 @@
     margin-bottom: 20px;//не точное
   }
 
-  &--add { //хотела сделать бордер псевдоклассом, куда здесь добавить к модификатору можно? самый нижний бордер для "Дополнительно"
+  &--add {
     flex-direction: column;
+    border-color: @special_grey;
 
     @media (min-width: @tablet-width) {
       flex-direction: row;
       justify-content: space-between;
       background-color: @basic_white;
+      border-top: 1px solid @special_grey;
+      padding: 26px 0 28px;
     }
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {//как к модификатору таблета добавить псевдокласс?для бордера
       display: flex;
       justify-content: space-between;
     }
   }
 
   &--more {
+    position: relative;
     justify-content: center;
     border-bottom: 1px solid @special_grey-2;
+    margin-bottom: 25px;
 
     @media (min-width: @tablet-width) {
       background-color: @basic_white;
       border: 1px solid @basic_grey;
+      text-align: center;
+    }
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      background-color: @special_grey-9;
+    }
+
+    &::before { //при расширении разъезжается, наверное надо позиционировать не относильное карточки, но отчего же тогда? а может svg?но кажется скорее нет
+      top: 39px;
+      left: 45%;
+      width: 30px;
+      height: 2px;
+    }
+
+    &::after {
+      top: 25px;
+      left: 50%;
+      width: 2px;
+      height: 30px;
     }
   }
 }
 
 .catalog-card__inner {
+  width: 50%;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 33px;
+    width: 100%;
   }
 }
 
@@ -55,22 +84,34 @@
   color: @special_dark-grey-2;
   margin-top: 0;
   margin-bottom: 14px;
+  margin-right: 64px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1.2;
+    margin: 31px 45px 24px;
   }
 
   @media (min-width: @desktop-width) {
     line-height: 21px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
   }
 
   &--more {
     color: @black;
-    justify-content: center;
+    margin: 53px 0 8px;
 
     @media (min-width: @tablet-width) {
       line-height: 1.1;
+      margin-bottom: 23px;
+    }
+  }
+
+  &--add {
+    @media (min-width: @tablet-width) {
+      margin: 0 0 25px;
     }
   }
 }
@@ -94,12 +135,17 @@
   }
 }
 
+.catalog-card__cell-value {
+  text-align: right;
+}
+
 .catalog-card__text {
   font-family: @font-Arial;
   margin-top: 0;
 
   @media (min-width: @tablet-width) {
     line-height: 1.1;
+    margin-bottom: 87px;
   }
 }
 
@@ -121,4 +167,8 @@
   line-height: 1.25;
   width: 100%;
   text-align: center;
+
+  @media (min-width: @desktop-width) {
+    width: fit-content;
+  }
 }
