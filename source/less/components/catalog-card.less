@@ -1,8 +1,7 @@
 .catalog-card {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 19px;
-  padding-bottom: 25px;
+  padding: 19px 20px 25px 20px;
   border-top: 1px solid @special_grey-2;
 
   @media (min-width: @tablet-width) {
@@ -15,19 +14,24 @@
     margin-bottom: 20px;//не точное
   }
 
+  @media (min-width: @desktop-width) {
+    padding: 0 30px 40px 35px;
+  }
+
   &--add {
     flex-direction: column;
-    border-color: @special_grey;
+    border: none;
+    padding: 0;
 
     @media (min-width: @tablet-width) {
       flex-direction: row;
-      justify-content: space-between;
       background-color: @basic_white;
-      border-top: 1px solid @special_grey;
-      padding: 26px 0 28px;
+      flex-wrap: nowrap;
+      align-content: flex-start;
+      margin: 0;
     }
 
-    @media (min-width: @desktop-width) {//как к модификатору таблета добавить псевдокласс?для бордера
+    @media (min-width: @desktop-width) {
       display: flex;
       justify-content: space-between;
     }
@@ -43,6 +47,8 @@
       background-color: @basic_white;
       border: 1px solid @basic_grey;
       text-align: center;
+      height: 100%;
+      justify-content: flex-end;
     }
 
     &::before, &::after {
@@ -51,11 +57,15 @@
       background-color: @special_grey-9;
     }
 
-    &::before { //при расширении разъезжается, наверное надо позиционировать не относильное карточки, но отчего же тогда? а может svg?но кажется скорее нет
+    &::before { //при расширении разъезжается, наверное надо позиционировать не относильное карточки, но отчего же тогда?
       top: 39px;
       left: 45%;
       width: 30px;
       height: 2px;
+
+      @media (min-width: @desktop-width) {
+        width: 60px;
+      }
     }
 
     &::after {
@@ -63,6 +73,10 @@
       left: 50%;
       width: 2px;
       height: 30px;
+
+      @media (min-width: @desktop-width) {
+        height: 60px;
+      }
     }
   }
 }
@@ -94,8 +108,8 @@
 
   @media (min-width: @desktop-width) {
     line-height: 21px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 0;
+    margin-right: 0;
     text-align: center;
   }
 
@@ -121,6 +135,7 @@
   font-family: @font-Arial;
   border-collapse: collapse;
   border-spacing: 0; //кажется,что ничего не изменилось
+  margin-bottom: 15px;
 }
 
 .catalog-card__item {
@@ -149,16 +164,20 @@
   }
 }
 
-.catalog-card__desc {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
+// .catalog-card__desc {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 15px;
+// }
 
 .catalog-card__parameter {
   @media (min-width: @tablet-width) {
-    margin-right: 50px;
+    text-align: right;
   }
+}
+
+.catalog-card__value {
+  text-align: right;
 }
 
 .catalog-card__button {
@@ -167,8 +186,4 @@
   line-height: 1.25;
   width: 100%;
   text-align: center;
-
-  @media (min-width: @desktop-width) {
-    width: fit-content;
-  }
 }
