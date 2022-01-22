@@ -1,6 +1,41 @@
+.gift {
+  background-image: url("/img/imagegift.png");
+  min-height: 280px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 35px;
+  padding: 10px 50px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    min-height: 200px;
+    justify-content: space-between;
+    padding: 50px 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    padding: 55px 42px 0;
+    justify-content: space-around;
+  }
+}
+
 .gift__text {
+  text-align: left;
   font-family: @font-Arial;
   font-size: 16px;
   line-height: 1.25;
   color: @basic_white;
+
+  @media (min-width: @tablet-width) {
+    max-width: 160px; //нельзя max width?
+  }
+
+  @media (min-width: @tablet-width) {
+   text-align: center;
+  }
 }

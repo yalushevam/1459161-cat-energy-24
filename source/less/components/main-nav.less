@@ -98,21 +98,21 @@
     &:last-child {
       margin-right: 0;
     }
-  }
 
-  &--current {
-    .main-nav__link {
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: @basic_green;
+    &--current {
+      .main-nav__link {
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: @basic_green;
 
-        @media (min-width: @desktop-width) {
-          background-color: @basic_white;
+          @media (min-width: @desktop-width) { //ка же застилизовать псевдо на второстепенных?
+            background-color: @basic_white;
+          }
         }
       }
     }
@@ -142,7 +142,13 @@
     padding: 0;
   }
 
-  @media (min-width: @desktop-width) {
-    color: @basic_white;
+  &--index {
+    @media (min-width: @desktop-width) {
+      color: @basic_white;
+
+      // &::before {
+      //   color: @basic_white;
+      // }
+    }
   }
 }

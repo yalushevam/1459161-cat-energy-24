@@ -1,49 +1,226 @@
+.catalog-card {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 19px 20px 25px 20px;
+  border-top: 1px solid @special_grey-2;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    flex-direction: column;
+    background-color: @basic_grey;
+    align-items: center;
+    padding-left: 37px;
+    padding-right: 39px;
+    margin-bottom: 20px;//не точное
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 30px 40px 35px;
+  }
+
+  &--add {
+    flex-direction: column;
+    border: none;
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      background-color: @basic_white;
+      flex-wrap: nowrap;
+      align-content: flex-start;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &--more {
+    position: relative;
+    justify-content: center;
+    border-bottom: 1px solid @special_grey-2;
+    margin-bottom: 25px;
+
+    @media (min-width: @tablet-width) {
+      background-color: @basic_white;
+      border: 1px solid @basic_grey;
+      text-align: center;
+      height: 100%;
+      justify-content: flex-end;
+    }
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      background-color: @special_grey-9;
+    }
+
+    &::before { //при расширении разъезжается, наверное надо позиционировать не относильное карточки, но отчего же тогда?
+      top: 39px;
+      left: 45%;
+      width: 30px;
+      height: 2px;
+
+      @media (min-width: @desktop-width) {
+        width: 60px;
+      }
+    }
+
+    &::after {
+      top: 25px;
+      left: 50%;
+      width: 2px;
+      height: 30px;
+
+      @media (min-width: @desktop-width) {
+        height: 60px;
+      }
+    }
+  }
+}
+
+.catalog-card__inner {
+  width: 50%;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 33px;
+    width: 100%;
+  }
+}
+
+.catalog-card__link-name {
+  @media (min-width: @tablet-width) {
+    flex: 0 0 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex: 0 0 33%;
+  }
+}
+
 .catalog-card__title {
   font-family: @font-Oswald;
   font-weight: normal;
   font-size: 16px;
   text-transform: uppercase;
   color: @special_dark-grey-2;
+  margin-top: 0;
+  margin-bottom: 14px;
+  margin-right: 64px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1.2;
+    margin: 31px 45px 24px;
   }
 
   @media (min-width: @desktop-width) {
     line-height: 21px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
   }
 
   &--more {
     color: @black;
+    margin: 53px 0 8px;
 
     @media (min-width: @tablet-width) {
       line-height: 1.1;
+      margin-bottom: 23px;
     }
   }
+
+  &--add {
+    @media (min-width: @tablet-width) {
+      margin: 0 0 25px;
+    }
+
+    @media (min-width: @desktop-width) {
+      flex: 0 0 34%;
+      margin: 0;
+      text-align: left;
+    }
+  }
+}
+
+.catalog-card__table {
+  width: 100%;
+  font-family: @font-Arial;
+  border-collapse: collapse;
+  border-spacing: 0; //кажется,что ничего не изменилось
+  margin-bottom: 15px;
+
+  &--add {
+    @media (min-width: @tablet-width) {
+      flex: 0 0 50%;
+    }
+
+    @media (min-width: @desktop-width) {
+      flex: 0 0 33%;
+      margin: 0;
+    }
+  }
+}
+
+.catalog-card__item {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid @special_grey;
+  }
+}
+
+.catalog-card__cell-name {
+  @media (min-width: @tablet-width) {
+    padding: 7px 0 9px;
+  }
+}
+
+.catalog-card__cell-value {
+  text-align: right;
+}
+
+.catalog-card__text {
+  font-family: @font-Arial;
+  margin-top: 0;
+
+  @media (min-width: @tablet-width) {
+    line-height: 1.1;
+    margin-bottom: 87px;
+  }
+}
+
+// .catalog-card__desc {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 15px;
+// }
+
+.catalog-card__parameter {
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
+}
+
+.catalog-card__value {
+  text-align: right;
 }
 
 .catalog-card__button {
   font-family: @font-Oswald;
   font-size: 16px;
   line-height: 1.25;
-}
+  width: 100%;
+  text-align: center;
 
-.catalog-card__text {
-  font-family: @font-Arial;
-
-  @media (min-width: @tablet-width) {
-    line-height: 1.1;
-  }
-}
-
-.catalog-card__table {
-  font-family: @font-Arial;
-}
-
-.catalog-card--add {
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
+    flex:0 0 33%;
   }
 }
