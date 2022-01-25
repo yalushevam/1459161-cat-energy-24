@@ -6,6 +6,10 @@
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="favicon.webmanifest">
 </head>
 
 <body class="page__body">
@@ -14,7 +18,11 @@
   <div class="container">
     <div class="page-header__inner">
       <a class="logo page-header__logo">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="img/logo-img-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-img-tablet.svg">
         <img class="logo__image" src="img/logo-img.svg" width="34" height="38" alt="Логотип">
+        </picture>
         <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
       </a>
 
@@ -48,7 +56,11 @@
         <div class="promo__wrapper">
           <h1 class="promo__title">Функциональное питание&nbspдля котов</h1>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <img class="promo__image" src="img/main-page__good-image.png" width="280" height="270" alt="Фото товара">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="img/main-page__promo-desktop.png 1x, img/main-page__promo-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/main-page__promo-tablet.png 1x, img/main-page__promo-tablet@2x.png 2x">
+          <img class="promo__image" src="img/main-page__promo.png" srcset="img/main-page__promo@2x.png 2x" width="280" height="270" alt="Фото товара">
+          </picture>
           <a href="form.html" class="promo__button button">Подобрать программу</a>
         </div>
 
@@ -134,11 +146,18 @@
 
 
           <div class="example__switch">
-              <!--фото кота-->
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/example-cat_tablet.png 1x, img/example-cat_tablet.png 2x">
+            <img class="catalog-card__image" src="img/example-cat.png" srcset="img/example-cat@2x.png 2x" width="140" height="112" alt="Фото товара">
+            </picture>
                 <label class="example__switch-text" for="slider__switch">Было</label>
                 <input class="slider__switch" type="checkbox" name="slider__switch" id="slider__switch" role="switch">
                 <label class="example__switch-text" for="slider__switch">Стало</label>
           </div>
+          <!-- <div class="example__toggle-slider">
+            <div class="example__toggle-scale"></div>
+            <button class="example__toggle-btn"></button>
+          </div> -->
         </div>
       </div>
     </section>
