@@ -100,6 +100,10 @@
   display: flex;
   align-items: center;
 
+  &--contact {
+    position: relative;
+  }
+
   &--dark {
     color: @basic_black;
     margin-bottom: 13px;
@@ -183,17 +187,21 @@
     border: 2px solid @special_dark-grey;
   }
 
+  // &:invalid {
+  //   border: 2px solid @status_error;
+  // }
+
   &--mail {
-    background-image: url("../img/icon_email.svg");
+    // background-image: url("../../img/svg/icon_email.svg");
 
     @media (min-width: @desktop-width) {
       margin-right: 78px;
     }
   }
 
-  &--tel {
-    background-image: url("../../img/phone.svg");
-  }
+  // &--tel {
+  //   background-image: url("../../img/svg/phone.svg"); //изза паддингов неровно стоит
+  // }
 
   &--textarea {
     padding: 9px 12px 0 15px;
@@ -234,6 +242,16 @@
 .form__checkbox:disabled ~ .form__name {
   opacity: 0.3;
 }
+
+.form__icon {
+  position: absolute;
+  top: 16px;
+  right: 17px;
+}
+
+// .form__icon path:hover {
+//   stroke: red;
+// }
 
 .form__button {
   font-family: @font-Oswald;

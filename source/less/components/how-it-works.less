@@ -26,9 +26,42 @@
 .how-it-works__item {
   position: relative;
   margin-bottom: 20px;
+  // background-repeat: no-repeat; еслм вынести сюда не работает
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--one {
+    @media (min-width: @tablet-width) {
+      background: url("../../img/svg/1.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+  }
+
+  &--two {
+    @media (min-width: @tablet-width) {
+      background: url("../../img/svg/2.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+  }
+
+  &--three {
+    @media (min-width: @tablet-width) {
+      background: url("../../img/svg/3.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+  }
+
+  &--four {
+    @media (min-width: @tablet-width) {
+      background: url("../../img/svg/4.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+    }
   }
 }
 

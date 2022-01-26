@@ -2,8 +2,18 @@
   background-color: @special_grey-5;
 }
 
+.example__container {
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
 .example__inner {
   padding: 25px 0 40px;
+
+  @media (min-width: @desktop-width) {
+    flex: 1 1 50%;
+  }
 }
 
 .example__title {
@@ -104,4 +114,8 @@
 
 .example__switch {
   text-align: center;
+}
+
+.example__img {
+  width: 100%;
 }
