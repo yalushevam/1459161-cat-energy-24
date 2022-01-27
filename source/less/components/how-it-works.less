@@ -16,6 +16,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    column-gap: 153px;
   }
 
   @media (min-width: @desktop-width) {
@@ -27,6 +28,11 @@
   position: relative;
   margin-bottom: 20px;
   // background-repeat: no-repeat; еслм вынести сюда не работает
+
+  @media (min-width: @tablet-width) {
+    min-height: 280px;
+    margin-bottom: 0;
+  }
 
   &:last-child {
     margin-bottom: 0;
