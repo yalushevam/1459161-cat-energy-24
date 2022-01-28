@@ -13,7 +13,6 @@
 </head>
 
 <body class="page__body">
-
   <header class="page-header">
   <div class="container">
     <div class="page-header__inner">
@@ -57,6 +56,9 @@
           <h1 class="promo__title">Функциональное питание&nbspдля котов</h1>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-page__promo-tablet@2x.webp 1x, img/main-page__promo-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/main-page__promo-tablet.webp 1x, img/main-page__promo-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/main-page__promo.webp 1x, img/main-page__promo@2x.webp 2x">
             <source media="(min-width: 1024px)" srcset="img/main-page__promo-desktop.png 1x, img/main-page__promo-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/main-page__promo-tablet.png 1x, img/main-page__promo-tablet@2x.png 2x">
           <img class="promo__image" src="img/main-page__promo.png" srcset="img/main-page__promo@2x.png 2x" width="280" height="270" alt="Фото товара">
@@ -73,7 +75,7 @@
         <h2 class="visually-hidden">Наши программы</h2>
         <ul class="offer-list">
 
-          <li class="offer-list__type">
+          <li class="offer-list__type offer-list__type--loss">
             <div class="offer-list__wrapper">
               <h3 class="offer-list__title">Похудение</h3>
               <p class="offer-list__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора
@@ -81,7 +83,7 @@
               <a href="#" class="offer-list__link">каталог slim</a>
             </div>
           </li>
-          <li class=" offer-list__type">
+          <li class="offer-list__type offer-list__type--gain">
             <div class="offer-list__wrapper">
               <h3 class="offer-list__title">Набор массы</h3>
               <p class="offer-list__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
@@ -101,16 +103,39 @@
           <h2 class="title how-it-works__title">Как это работает</h2>
           <ul class="how-it-works__list">
 
-            <li class="how-it-works__item how-it-works__item--leaf">
+            <li class="how-it-works__item how-it-works__item--one">
+              <svg width="31" height="32">
+                <use href="/img/svg/sprite.svg#leaf"></use>
+              </svg>
+              <symbol viewBox="0 0 31 32" id="leaf" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_130_911)">
+                <path d="M28.3438 2.767C28.2434 2.317 27.8647 2 27.4325 2C27.4306 2 27.4288 2 27.4269 2C22.4891 2.033 10.4816 2.916 5.63375 10.38C3.11562 14.258 2.89906 19.293 4.98969 25.345C5.00562 25.392 5.03844 25.424 5.06 25.467C4.31281 27.44 4.02312 28.753 4.01562 28.79C3.90687 29.33 4.23031 29.862 4.73656 29.978C4.80219 29.993 4.86781 30 4.93344 30C5.36562 30 5.75469 29.679 5.84937 29.21C5.86906 29.108 8.25781 18.837 16.7028 12.832C17.1341 12.526 17.2503 11.905 16.9625 11.445C16.6747 10.985 16.0934 10.86 15.6622 11.168C10.8734 14.573 7.92406 19.176 6.18969 22.824C4.94844 18.246 5.27375 14.447 7.17594 11.519C10.9194 5.755 19.7984 4.365 25.1581 4.071C24.005 5.872 22.745 9.174 22.745 15C22.745 18.12 21.9153 20.522 20.2803 22.14C17.6591 24.731 13.4009 24.974 10.2866 24.724C9.76906 24.679 9.32 25.095 9.28062 25.646C9.24125 26.196 9.62844 26.676 10.1441 26.718C10.7675 26.769 11.4331 26.8 12.125 26.8C15.2956 26.8 18.9941 26.137 21.5544 23.606C23.5888 21.595 24.62 18.7 24.62 15.001C24.62 5.902 27.8356 3.905 27.8516 3.896C28.2416 3.687 28.4459 3.219 28.3438 2.767Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_130_911">
+                <rect width="30" height="32" fill="white" transform="translate(0.5)"/>
+                </clipPath>
+                </defs>
+              </symbol>
               <p class="how-it-works__text">Функциональное питание содержит только полезные питательные вещества.</p>
             </li>
-            <li class="how-it-works__item how-it-works__item--bowl">
+            <li class="how-it-works__item how-it-works__item--two">
+              <svg width="30" height="31">
+                <use xlink:href="/img/svg/sprite.svg#tub"></use>
+              </svg>
               <p class="how-it-works__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
             </li>
-            <li class="how-it-works__item how-it-works__item--dinner">
+            <li class="how-it-works__item how-it-works__item--three">
+              <svg width="26" height="30">
+                <use xlink:href="/img/svg/sprite.svg#diner"></use>
+                </svg>
               <p class="how-it-works__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
-            <li class="how-it-works__item how-it-works__item--time">
+            <li class="how-it-works__item how-it-works__item--four">
+              <svg width="33" height="33">
+                <use xlink:href="/img/svg/sprite.svg#time"></use>
+                </svg>
+
               <p class="how-it-works__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
             </li>
 
@@ -121,7 +146,7 @@
     </section>
 
     <section class="example">
-      <div class="container">
+      <div class="container example__container">
 
         <div class="example__inner">
           <h2 class="title example__title">Живой пример</h2>
@@ -143,12 +168,12 @@
 
             <p class="example__cost">Затраты на питание: <span class="example__price">15 000 руб.</span></p>
           </div>
-
+        </div>
 
           <div class="example__switch">
             <picture>
               <source media="(min-width: 768px)" srcset="img/example-cat_tablet.png 1x, img/example-cat_tablet.png 2x">
-            <img class="catalog-card__image" src="img/example-cat.png" srcset="img/example-cat@2x.png 2x" width="140" height="112" alt="Фото товара">
+            <img class="example__img" src="img/example-cat.png" srcset="img/example-cat@2x.png 2x" width="140" height="112" alt="Фото товара">
             </picture>
                 <label class="example__switch-text" for="slider__switch">Было</label>
                 <input class="slider__switch" type="checkbox" name="slider__switch" id="slider__switch" role="switch">
@@ -158,7 +183,6 @@
             <div class="example__toggle-scale"></div>
             <button class="example__toggle-btn"></button>
           </div> -->
-        </div>
       </div>
     </section>
 
