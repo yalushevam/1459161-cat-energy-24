@@ -21,6 +21,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 75px;
   }
 }
 
@@ -38,53 +39,66 @@
     margin-bottom: 0;
   }
 
-  &--one {
-    @media (min-width: @tablet-width) {
-      background: url("../../img/svg/1.svg");
-      background-repeat: no-repeat;
-      background-position: right;
-    }
+  &::before,
+  &::after {
+    content: "";
+    display: block;
   }
 
-  &--two {
-    @media (min-width: @tablet-width) {
-      background: url("../../img/svg/2.svg");
-      background-repeat: no-repeat;
-      background-position: right;
-    }
+  &::before {
+    width: 80px;
+    height: 80px;
+    background-color: @basic_green;
+    margin-bottom: 20px;
   }
 
-  &--three {
-    @media (min-width: @tablet-width) {
-      background: url("../../img/svg/3.svg");
-      background-repeat: no-repeat;
-      background-position: right;
-    }
-  }
+  // &--one {
+  //   @media (min-width: @tablet-width) {
+  //     background: url("../../img/svg/1.svg");
+  //     background-repeat: no-repeat;
+  //     background-position: right;
+  //   }
+  // }
 
-  &--four {
-    @media (min-width: @tablet-width) {
-      background: url("../../img/svg/4.svg");
-      background-repeat: no-repeat;
-      background-position: right;
-    }
-  }
+  // &--two {
+  //   @media (min-width: @tablet-width) {
+  //     background: url("../../img/svg/2.svg");
+  //     background-repeat: no-repeat;
+  //     background-position: right;
+  //   }
+  // }
+
+  // &--three {
+  //   @media (min-width: @tablet-width) {
+  //     background: url("../../img/svg/3.svg");
+  //     background-repeat: no-repeat;
+  //     background-position: right;
+  //   }
+  // }
+
+  // &--four {
+  //   @media (min-width: @tablet-width) {
+  //     background: url("../../img/svg/4.svg");
+  //     background-repeat: no-repeat;
+  //     background-position: right;
+  //   }
+  // }
 }
 
 .how-it-works__text {
   font-family: @font-Arial;
   color: @special_dark-grey;
-  margin-left: 80px;
+  // margin-left: 80px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background-color: @basic_green;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 60px;
+  //   height: 60px;
+  //   background-color: @basic_green;
+  // }
 
   @media (min-width: @tablet-width) {
     font-size: 16px;

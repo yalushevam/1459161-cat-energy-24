@@ -22,7 +22,7 @@
   content: "";
   position: absolute;
   top: 13px;
-  left: 10px;
+  left: 20px;
   width: 24px;
   height: 1.5px;
   background-color: @basic_black;
@@ -35,9 +35,9 @@
   }
 }
 
-.main-nav--closed .main-nav__item--current {
-  text-align: center;
-}
+// .main-nav--closed .main-nav__item--current {
+//   text-align: center;
+// }
 
 
 .main-nav--opened .main-nav__toggle {
@@ -90,37 +90,25 @@
   text-align: center;
   border-bottom: 1px solid @special_grey-8;
 
-  &:first-of-type {
-    border-top: 1px solid @special_grey-8;
-  }
-
   @media (min-width: @tablet-width) {
     border: none;
     font-size: 18px;
     margin-right: 35px;
+  }
 
-    &:last-child {
-      margin-right: 0;
-    }
+  &:first-of-type {
+    border-top: 1px solid @special_grey-8;
 
-    &--current {
-      .main-nav__link {
-        &::before {
-          content: "";
-          position: absolute;
-          bottom: -10px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background-color: @basic_green;
-
-          @media (min-width: @desktop-width) { //ка же застилизовать псевдо на второстепенных?
-            background-color: @basic_white;
-          }
-        }
-      }
+    @media (min-width: @tablet-width) {
+      border: none;
     }
   }
+
+
+
+  &:last-child {
+      margin-right: 0;
+   }
 }
 
 .main-nav__link {
@@ -133,6 +121,12 @@
   white-space: nowrap;
   text-decoration: none;
   padding: 22px 0 24px;
+  transition: 0.5s;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    padding: 0;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -142,17 +136,37 @@
     opacity: 0.3;
   }
 
-  @media (min-width: @tablet-width) {
-    padding: 0;
-  }
-
   &--index {
     @media (min-width: @desktop-width) {
       color: @basic_white;
+    }
 
-      // &::before {
-      //   color: @basic_white;
-      // }
+    &.main-nav__link--current {
+      @media (min-width: @desktop-width) {
+        color: @basic_white;
+      }
+
+      &::before{
+      @media (min-width: @desktop-width) {
+        background-color: @basic_white;
+      }
+    }
+  }
+}
+
+  &--current {
+    &::before {
+      @media (min-width: @tablet-width) {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: @basic_green;
+      }
+
+
     }
   }
 }

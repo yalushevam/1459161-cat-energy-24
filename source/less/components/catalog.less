@@ -12,6 +12,11 @@
   margin-bottom: 40px;
   text-align: left;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-bottom: 90px;
+  }
 }
 
 .catalog__list {
@@ -22,7 +27,8 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 68px;
+    margin-bottom: 44px;
   }
 
   @media (min-width: @desktop-width) {

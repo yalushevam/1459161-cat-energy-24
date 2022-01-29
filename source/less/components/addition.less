@@ -1,3 +1,11 @@
+.addition {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
+}
+
 .addition__wrapper {
   @media (min-width: @desktop-width) {
     display: flex;
@@ -8,9 +16,13 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  margin-bottom: 60px;
+  margin-bottom: 35px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 69px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 70%;
@@ -20,14 +32,23 @@
 
 .addition__item {
   border-top: 1px solid @special_grey-2;
-  padding: 15px 0 17px;
+  padding: 12px 0 18px;
 
   &:last-child {
     border-bottom: 1px solid @special_grey-2;
+  }
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @special_grey-2;
+    padding: 26px 38px;
   }
 }
 
 .addition__subtitle {
   margin-top: 0;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 80px;
+  }
 }
