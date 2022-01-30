@@ -17,3 +17,34 @@
 .social__item:not(:last-child) {
   margin-right: 35px;
 }
+
+.social__img path:hover {
+  fill: @basic_green;
+}
+
+.social__img path:active {
+  opacity: 30%;
+}
+
+.social__img {
+  &--vk { //лежат неправильно
+    @media (min-width: @tablet-width) {
+      width: 30px;
+      height: 22px;
+    }
+  }
+
+  &--inst {
+    @media (min-width: @tablet-width) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--face {
+    @media (min-width: @tablet-width) {
+      width: 28px;
+      height: 33px;
+    }
+  }
+}

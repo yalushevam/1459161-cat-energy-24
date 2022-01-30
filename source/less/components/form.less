@@ -1,5 +1,5 @@
 .form {
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
 .form__wrapper {
@@ -11,6 +11,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
+    margin-bottom: 71px;
   }
 }
 
@@ -21,10 +22,12 @@
     grid-template-rows: 1fr 1fr 1fr;
     row-gap: 10px;
     margin-bottom: 24px;
+    padding: 0 20px;
 
     @media (min-width: @tablet-width) {
-      row-gap: 25px;
-      margin-bottom: 75px;
+      row-gap: 21px;
+      margin-bottom: 70px;
+      padding: 0;
     }
 
     @media (min-width: @desktop-width) {
@@ -37,8 +40,7 @@
     grid-template-rows: 1fr 1fr 1fr;
     row-gap: 13px;
     margin-bottom: 27px;
-    padding-top: 23px;
-    padding-bottom: 17px;
+    padding: 23px 20px 17px;
     border-top: 1px solid @special_grey-6;
     border-bottom: 1px solid @special_grey-6;
 
@@ -58,11 +60,13 @@
     row-gap: 10px;
     margin-top: 37px;
     margin-bottom: 23px;
+    padding: 0 20px;
 
     @media (min-width: @tablet-width) {
-      row-gap: 24px;
-      margin-top: 73px;
-      margin-bottom: 69px;
+      row-gap: 19px;
+      margin-top: 77px;
+      margin-bottom: 64px;
+      padding: 0;
     }
 
     @media (min-width: @desktop-width) {
@@ -74,21 +78,30 @@
   &--comment {
     display: flex;
     flex-direction: column;
+    padding: 0 20px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+    }
   }
 
   &--add {
     grid-template-rows: 1fr 1fr 1fr;
     margin: 35px 0 18px;
+    padding: 0 20px;
 
     @media (min-width: @tablet-width) {
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: 344px auto; //здесь макет совсем не совпадал, сменила первый столбец
-      margin-top: 60px;
+      margin-top: 56px;
+      margin-bottom: 22px;
+      padding: 0;
     }
 
     @media (min-width: @desktop-width) {
       grid-template-rows: 1fr;
       grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 3px;
     }
   }
 }
@@ -124,6 +137,18 @@
       margin-bottom: 60px;
     }
   }
+
+  &--mail {
+    @media (min-width: @desktop-width) {
+      margin-right: 41px;
+    }
+  }
+
+  &--tel {
+    @media (min-width: @desktop-width) {
+      margin-left: 41px;
+    }
+  }
 }
 
 .form__radio {
@@ -144,6 +169,10 @@
     width: 40px;
     height: 40px;
     margin-right: 20px;
+  }
+
+  &:hover {
+    border: 1px solid @special_grey-10;
   }
 }
 
@@ -186,6 +215,12 @@
   background-position: top 15px right 15px;
   outline: 0;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 17px;
+    padding-left: 18px;
+    margin-left: 17px;
+  }
+
   &::placeholder {
     font-family: @font-Oswald;
     font-size: 16px;
@@ -205,27 +240,22 @@
   }
 
   // &:invalid {
-  //   border: 2px solid @status_error;
+  //   box-shadow: 0 0 0 2px @status_error;
+  //   border-color: transparent;
   // }
-
-  &--mail {
-    @media (min-width: @desktop-width) {
-      margin-right: 78px;
-    }
-  }
 
   &--textarea {
     padding: 9px 12px 0 15px;
     margin: 20px 0 23px;
 
     @media (min-width: @tablet-width) {
-      padding-bottom: 15px;
-      margin-top: 52px;
-      margin-bottom: 68px;
+      padding-bottom: 21px;
+      margin-top: 47px;
+      margin-bottom: 67px;
     }
 
     @media (min-width: @desktop-width) {
-      margin: 0 0 67px;
+      margin: 48px 0 67px;
     }
   }
 }
@@ -245,6 +275,10 @@
     width: 40px;
     height: 40px;
     margin-right: 19px;
+  }
+
+  &:hover {
+    border: 1px solid @special_grey-10;
   }
 }
 
@@ -272,14 +306,14 @@
 .form__button {
   font-family: @font-Oswald;
   font-size: 16px;
-  margin-bottom: 22px;
+  margin: 0 20px 22px;
   min-width: 280px;
   width: fit-content;
   padding: 8px 44px;
 
   @media (min-width: @tablet-width) {
-    padding: 13px 64px;
-    margin-right: 60px;
+    padding: 11px 64px;
+    margin: 0 60px 0 0;
     font-size: 20px;
   }
 

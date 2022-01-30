@@ -1,21 +1,38 @@
 .program {
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 83px;
+  }
 }
 
 .program__container {
+  padding: 0;
+
   @media (min-width: @tablet-width) {
     padding: 0 60px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 20px;
+  }
 }
+
 .program__title {
   line-height: 1;
   margin-top: 0;
   margin-bottom: 37px;
   text-align: start;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     margin-bottom: 54px;
+    padding: 0;
   }
 }
 
@@ -24,11 +41,13 @@
   color: @basic_black;
   margin-top: 0;
   margin-bottom: 39px;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1.5;
     width: 323px;
     margin-bottom: 64px;
+    padding: 0;
   }
 }

@@ -104,11 +104,9 @@
     }
   }
 
-
-
   &:last-child {
-      margin-right: 0;
-   }
+    margin-right: 0;
+  }
 }
 
 .main-nav__link {
@@ -126,6 +124,10 @@
   @media (min-width: @tablet-width) {
     font-size: 18px;
     padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
   }
 
   &:hover {
@@ -146,13 +148,13 @@
         color: @basic_white;
       }
 
-      &::before{
-      @media (min-width: @desktop-width) {
-        background-color: @basic_white;
+      &::before {
+        @media (min-width: @desktop-width) {
+          background-color: @basic_white;
+        }
       }
     }
   }
-}
 
   &--current {
     &::before {
@@ -165,8 +167,6 @@
         height: 2px;
         background-color: @basic_green;
       }
-
-
     }
   }
 }
