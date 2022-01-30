@@ -17,7 +17,7 @@
     flex-direction: row;
     min-height: 200px;
     justify-content: space-between;
-    padding: 0;
+    padding: 10px 125px 0 78px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("/img/gift tablet@2x.jpg");
@@ -38,6 +38,10 @@
 
 .gift__icon {
   margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .gift__text {
