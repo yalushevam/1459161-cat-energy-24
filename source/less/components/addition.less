@@ -4,6 +4,10 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 76px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 82px;
+  }
 }
 
 .addition__wrapper {
@@ -25,7 +29,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 70%;
+    width: 74%;
+    margin-bottom: 0;
     margin-right: 80px;
   }
 }
@@ -34,13 +39,23 @@
   border-top: 1px solid @special_grey-2;
   padding: 12px 0 18px;
 
-  &:last-child {
-    border-bottom: 1px solid @special_grey-2;
-  }
-
   @media (min-width: @tablet-width) {
     border: 1px solid @special_grey-2;
     padding: 26px 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+    border-top: 1px solid @special_grey;
+    padding: 16px 0;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid @special_grey-2;
+
+    @media (min-width: @desktop-width) {
+      border-bottom: 1px solid @special_grey;
+    }
   }
 }
 
@@ -52,5 +67,9 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 80px;
     padding: 0 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }
